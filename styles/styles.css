@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  background-image: url(/assets/landscape-artwork-Kvacm-digital-art-1490391-wallhere.com.jpg);
+  background-position: center;
+  background-image: url(/assets/digital-art-landscape-mountains-space-planet-astronaut-1471645-wallhere.com.jpg);
+}
+
+.main-container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.options__container {
+  width: 30%;
+  height: 8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.535);
+  border-radius: 20px;
+}
+
+.options__container img {
+  width: 70%;
+}
+
+.main__score-board {
+  margin-bottom: 1em;
+}
+
+.main__score-board p {
+  display: inline;
+  font-size: 5rem;
+}
+
+.main__game-screen {
+  width: 60%;
+  height: 50vh;
+  margin: 0 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 3em;
+}
+
+.game-screen__player p, .game-screen__cpu p {
+  font-size: 2em;
+  color: white;
+  display: inline-block;
+  margin-top: 4em;
+}
+
+.pop-up-win {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  visibility: hidden;
+}
+
+.pop-up-win div {
+  width: 600px;
+  height: 350px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pop-up-win div p {
+  font-size: 2.5em;
+}
+
+.pop-up-win div {
+  background-image: url(/assets/digital-art-fantasy-art-planet-space-stars-helmet-94360-wallhere.com.jpg);
+}
+
+.pop-up-win p {
+  color: white;
+}
+
+.pop-up-tie {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  visibility: hidden;
+}
+
+.pop-up-tie div {
+  width: 600px;
+  height: 350px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pop-up-tie div p {
+  font-size: 2.5em;
+}
+
+.pop-up-tie div {
+  background-image: url(/assets/artwork-science-fiction-astronaut-planet-Earth-women-1660257-wallhere.com.jpg);
+}
+
+.pop-up-tie p {
+  color: white;
+}
+
+.pop-up-defeat {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  visibility: hidden;
+}
+
+.pop-up-defeat div {
+  width: 600px;
+  height: 350px;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pop-up-defeat div p {
+  font-size: 2.5em;
+}
+
+.pop-up-defeat div {
+  background-image: url(/assets/illustration-planet-space-futuristic-artwork-Earth-245064-wallhere.com.jpg);
+}
+
+.pop-up-defeat p {
+  color: white;
+}
+/*# sourceMappingURL=styles.css.map */

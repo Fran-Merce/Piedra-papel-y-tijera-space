@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+body{
+    background-image: url(/assets/landscape-artwork-Kvacm-digital-art-1490391-wallhere.com.jpg);
+    background-position: center;
+    background-image: url(/assets/digital-art-landscape-mountains-space-planet-astronaut-1471645-wallhere.com.jpg);
+}
+@mixin popUp {
+    position: absolute;
+    width: 100%;
+    height: 100vh ;
+    background-color: rgba(0, 0, 0,.3);
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    div{
+        width: 600px;
+        height: 350px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        p{
+            font-size: 2.5em;
+            
+        }
+        
+        
+    }
+visibility: hidden;
+}
+.main-container{
+    width: 100%;
+    height:100vh ;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+
+.options__container{
+    width: 30%;
+    height: 8em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.535);
+    border-radius: 20px;
+    img{
+        width: 70%;
+    }
+}
+
+.main__score-board{
+    margin-bottom: 1em;
+    p{
+        display: inline;
+        font-size: 5rem;
+        
+    }
+}
+
+.main__game-screen{
+    width: 60%;
+    height: 50vh;
+    margin: 0 20% ;
+    display: flex;
+    align-items:top;
+    justify-content: space-around;
+    margin-bottom: 3em;
+
+    
+}
+
+.game-screen__player,.game-screen__cpu{
+    p{
+        font-size: 2em;
+        color: white;
+        display: inline-block;
+        margin-top: 4em;
+        
+    }
+    
+}
+
+.pop-up-win{
+    @include popUp;
+    div{
+        
+        background-image: url(/assets/digital-art-fantasy-art-planet-space-stars-helmet-94360-wallhere.com.jpg);
+    }
+    p{
+        color: white
+    }
+}
+
+
+
+.pop-up-tie{
+    @include popUp;
+    div{
+        background-image: url(/assets/artwork-science-fiction-astronaut-planet-Earth-women-1660257-wallhere.com.jpg);
+    }
+    p{
+        color: white
+    }
+}
+
+.pop-up-defeat{
+    
+    @include popUp;
+    div{
+        
+        background-image: url(/assets/illustration-planet-space-futuristic-artwork-Earth-245064-wallhere.com.jpg);
+    }
+    p{
+        color: white
+    }
+}
+
+
+
