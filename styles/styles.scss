@@ -1,61 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Shalimar&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
+   
 }
 body{
-    background-image: url(/assets/landscape-artwork-Kvacm-digital-art-1490391-wallhere.com.jpg);
-    background-position: center;
     background-image: url(/assets/digital-art-landscape-mountains-space-planet-astronaut-1471645-wallhere.com.jpg);
+    background-position: center;
 }
-@mixin popUp {
+.pop-up-container{
     position: absolute;
     width: 100%;
-    height: 100vh ;
-    background-color: rgba(0, 0, 0,.3);
     top: 0;
-    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    div{
-        width: 600px;
-        height: 350px;
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        
-        background-repeat: no-repeat;
-        background-size: cover;
-        p{
-            font-size: 2.5em;
-            
-        }
-        
-        
-    }
-visibility: hidden;
+    z-index: 10;
 }
-.main-container{
+@mixin popUp {
+    width: 550px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-size: cover;
+    border-radius: 20px;
+        p{
+            font-size: 7em;
+            color: #fff;
+            font-family: 'Shalimar', cursive;
+            font-weight: 400;
+        }
+        div{
+            text-align: center;
+        }
+        visibility: hidden;
+    }
+    .btn-restart{
+        visibility: hidden;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0,0.5);
+        color: #fff;
+        border: 1px solid #fff;
+        cursor: pointer;
+        font-family: cursive;
+        font-size: 1em;
+    }
+    
+    
+    .main-container{
     width: 100%;
     height:100vh ;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-    
-}
 
+}
 .options__container{
     width: 30%;
     height: 8em;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: rgba(0, 0, 0, 0.535);
     border-radius: 20px;
     img{
@@ -68,67 +81,143 @@ visibility: hidden;
     p{
         display: inline;
         font-size: 5rem;
-        
     }
 }
 
 .main__game-screen{
-    width: 60%;
+    position: relative;
+    width: 70%;
     height: 50vh;
-    margin: 0 20% ;
+    margin-bottom: 3em;
     display: flex;
     align-items:top;
-    justify-content: space-around;
-    margin-bottom: 3em;
-
-    
+    justify-content: space-between;
 }
 
+
 .game-screen__player,.game-screen__cpu{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 120px;
+    height: 200px;
     p{
         font-size: 2em;
         color: white;
         display: inline-block;
-        margin-top: 4em;
-        
     }
-    
 }
 
+.options__imgs{
+    width: 70%;
+}
 .pop-up-win{
     @include popUp;
-    div{
-        
-        background-image: url(/assets/digital-art-fantasy-art-planet-space-stars-helmet-94360-wallhere.com.jpg);
-    }
-    p{
-        color: white
-    }
-}
-
-
-
-.pop-up-tie{
-    @include popUp;
-    div{
-        background-image: url(/assets/artwork-science-fiction-astronaut-planet-Earth-women-1660257-wallhere.com.jpg);
-    }
-    p{
-        color: white
-    }
-}
-
-.pop-up-defeat{
     
-    @include popUp;
-    div{
+    background-image: url(/assets/digital-art-fantasy-art-planet-space-stars-helmet-94360-wallhere.com.jpg);
+    .btn-restart{
+        visibility: visible;
+        }
         
-        background-image: url(/assets/illustration-planet-space-futuristic-artwork-Earth-245064-wallhere.com.jpg);
+        visibility: visible!important;
+        
     }
-    p{
-        color: white
+    .pop-up-tie{
+        visibility: visible !important;
+        @include popUp;
+        .btn-restart{
+            visibility: visible;
+        }
+        background-image: url(/assets/artwork-science-fiction-astronaut-planet-Earth-women-1660257-wallhere.com.jpg);
+        
+        
+    }
+    
+    .pop-up-tie{
+        visibility: visible!important;
+        @include popUp;
+        .btn-restart{
+            visibility: visible;
+        }
+        background-image: url(/assets/artwork-science-fiction-astronaut-planet-Earth-women-1660257-wallhere.com.jpg);
+        
+        
+    }
+    
+    .pop-up-defeat{
+    @include popUp;
+   
+        .btn-restart{
+            visibility: visible;
+        }
+        background-image: url(/assets/illustration-planet-space-futuristic-artwork-Earth-245064-wallhere.com.jpg);
+        
+    }
+    
+    
+    
+    .animacion{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    animation: b .5s linear forwards infinite;
+    background-color: rgba(0, 0, 0,.7);
+    div{
+        animation: a 1.2s linear forwards infinite;
+        width: 70%;
+        height: 70%;
+        background-size: cover;
+    }
+}
+.animacion2{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0,.7);
+    border: 3px solid rgb(68, 255, 0);
+    div{
+        width: 70%;
+        height: 70%;
+        background-size: cover;
     }
 }
 
+@keyframes a {
+    0%{
+        background-image: url(/assets/11959victoryhand_111462.svg);
+       
+        
+    }
+    50%{
+        background-image: url(/assets/11990handwithfingerssplayed_111475.svg);
+        
+    }
 
+    100%{
+        
+        background-image: url(/assets/12020raisedfist_111487.svg);
+    }
+}
 
+@keyframes b {
+    0%{
+        
+        border: 3px solid red;
+        
+    }
+    50%{
+        
+        border: 3px solid rgb(68, 255, 0);
+    }
+
+    100%{
+        border: 3px solid red;
+        
+    }
+}

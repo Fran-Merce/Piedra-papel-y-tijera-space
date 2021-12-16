@@ -19,13 +19,13 @@
         
         <div class="options__container" id="options-container">
             <div  >
-                <img id="scissorsOption" class="option" src="assets/11959victoryhand_111462.svg" alt="" data-id="1">
+                <img id="scissorsOption" class="option options__img " src="assets/11959victoryhand_111462.svg" alt="" data-id="1">
             </div>
             <div  >
-                <img id="paperOption" class="option" src="assets/11990handwithfingerssplayed_111475.svg" alt="" data-id="2">
+                <img id="paperOption" class="option options__img " src="assets/11990handwithfingerssplayed_111475.svg" alt="" data-id="2">
             </div>
             <div >
-                <img id="rockOption" class="option" src="assets/12020raisedfist_111487.svg" alt="" data-id="3">
+                <img id="rockOption" class="option options__img " src="assets/12020raisedfist_111487.svg" alt="" data-id="3">
             </div>
         </div>
         <div class="main__score-board">
@@ -34,37 +34,24 @@
             <p class="score-board__cpu">0</p>
         </div>
         <div class="main__game-screen">
+            <div class="pop-up-container">
+
+                <div  id="pop-up">
+                    <div>
+                        <p id=result></p>
+                        <button id=btnRestart class="btn-restart">Nuevo Intento</button>
+                    </div>
+                </div>
+            </div>
+            
             <div class="game-screen__player" id="player-screen">
-                <p>Tu Jugada</p>
+    
             </div>
             <div></div>
             <div></div>
             <div class="game-screen__cpu" id="cpu-screen">
-                <p>Cpu Jugada</p>
                 
             </div>
-        </div>
-        
-        <button>REGLAS</button>
-    </div>
-    <!-- !MOCK -->
-    <!-- toDo convert three cards into one card -->
-    <div class="pop-up-win">
-        <div>
-            <p>Victoria!</p>
-            <button  class="btnRestart">Nuevo Intento</button>
-        </div>
-    </div>
-    <div class="pop-up-tie">
-        <div>
-            <p> Empate -_- </p>
-            <button class="btnRestart">Nuevo Intento</button>
-        </div>
-    </div>
-    <div class="pop-up-defeat">
-        <div>
-            <p> Derrota :c</p>
-            <button class="btn-Restart">Nuevo Intento</button>
         </div>
     </div>
     <script src="index.js"></script>

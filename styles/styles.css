@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Shalimar&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +8,40 @@
 }
 
 body {
-  background-image: url(/assets/landscape-artwork-Kvacm-digital-art-1490391-wallhere.com.jpg);
-  background-position: center;
   background-image: url(/assets/digital-art-landscape-mountains-space-planet-astronaut-1471645-wallhere.com.jpg);
+  background-position: center;
+}
+
+.pop-up-container {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 10;
+}
+
+.btn-restart {
+  visibility: hidden;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  font-family: cursive;
+  font-size: 1em;
 }
 
 .main-container {
@@ -38,9 +70,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.535);
   border-radius: 20px;
 }
@@ -59,54 +90,46 @@ body {
 }
 
 .main__game-screen {
-  width: 60%;
+  position: relative;
+  width: 70%;
   height: 50vh;
-  margin: 0 20%;
+  margin-bottom: 3em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: top;
       -ms-flex-align: top;
           align-items: top;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  margin-bottom: 3em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.game-screen__player, .game-screen__cpu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  width: 120px;
+  height: 200px;
 }
 
 .game-screen__player p, .game-screen__cpu p {
   font-size: 2em;
   color: white;
   display: inline-block;
-  margin-top: 4em;
+}
+
+.options__imgs {
+  width: 70%;
 }
 
 .pop-up-win {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
-  top: 0;
-  z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  visibility: hidden;
-}
-
-.pop-up-win div {
-  width: 600px;
+  width: 550px;
   height: 350px;
-  border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,49 +143,32 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-repeat: no-repeat;
   background-size: cover;
-}
-
-.pop-up-win div p {
-  font-size: 2.5em;
-}
-
-.pop-up-win div {
+  border-radius: 20px;
+  visibility: hidden;
   background-image: url(/assets/digital-art-fantasy-art-planet-space-stars-helmet-94360-wallhere.com.jpg);
+  visibility: visible !important;
 }
 
 .pop-up-win p {
-  color: white;
+  font-size: 7em;
+  color: #fff;
+  font-family: 'Shalimar', cursive;
+  font-weight: 400;
+}
+
+.pop-up-win div {
+  text-align: center;
+}
+
+.pop-up-win .btn-restart {
+  visibility: visible;
 }
 
 .pop-up-tie {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
-  top: 0;
-  z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  visibility: hidden;
-}
-
-.pop-up-tie div {
-  width: 600px;
+  visibility: visible !important;
+  width: 550px;
   height: 350px;
-  border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -176,49 +182,68 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-repeat: no-repeat;
   background-size: cover;
-}
-
-.pop-up-tie div p {
-  font-size: 2.5em;
-}
-
-.pop-up-tie div {
+  border-radius: 20px;
+  visibility: hidden;
   background-image: url(/assets/artwork-science-fiction-astronaut-planet-Earth-women-1660257-wallhere.com.jpg);
 }
 
 .pop-up-tie p {
-  color: white;
+  font-size: 7em;
+  color: #fff;
+  font-family: 'Shalimar', cursive;
+  font-weight: 400;
+}
+
+.pop-up-tie div {
+  text-align: center;
+}
+
+.pop-up-tie .btn-restart {
+  visibility: visible;
+}
+
+.pop-up-tie {
+  visibility: visible !important;
+  width: 550px;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-size: cover;
+  border-radius: 20px;
+  visibility: hidden;
+  background-image: url(/assets/artwork-science-fiction-astronaut-planet-Earth-women-1660257-wallhere.com.jpg);
+}
+
+.pop-up-tie p {
+  font-size: 7em;
+  color: #fff;
+  font-family: 'Shalimar', cursive;
+  font-weight: 400;
+}
+
+.pop-up-tie div {
+  text-align: center;
+}
+
+.pop-up-tie .btn-restart {
+  visibility: visible;
 }
 
 .pop-up-defeat {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
-  top: 0;
-  z-index: 10;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  visibility: hidden;
-}
-
-.pop-up-defeat div {
-  width: 600px;
+  width: 550px;
   height: 350px;
-  border-radius: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -232,19 +257,121 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-repeat: no-repeat;
   background-size: cover;
-}
-
-.pop-up-defeat div p {
-  font-size: 2.5em;
-}
-
-.pop-up-defeat div {
+  border-radius: 20px;
+  visibility: hidden;
   background-image: url(/assets/illustration-planet-space-futuristic-artwork-Earth-245064-wallhere.com.jpg);
 }
 
 .pop-up-defeat p {
-  color: white;
+  font-size: 7em;
+  color: #fff;
+  font-family: 'Shalimar', cursive;
+  font-weight: 400;
+}
+
+.pop-up-defeat div {
+  text-align: center;
+}
+
+.pop-up-defeat .btn-restart {
+  visibility: visible;
+}
+
+.animacion {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: b .5s linear forwards infinite;
+          animation: b .5s linear forwards infinite;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.animacion div {
+  -webkit-animation: a 1.2s linear forwards infinite;
+          animation: a 1.2s linear forwards infinite;
+  width: 70%;
+  height: 70%;
+  background-size: cover;
+}
+
+.animacion2 {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 3px solid #44ff00;
+}
+
+.animacion2 div {
+  width: 70%;
+  height: 70%;
+  background-size: cover;
+}
+
+@-webkit-keyframes a {
+  0% {
+    background-image: url(/assets/11959victoryhand_111462.svg);
+  }
+  50% {
+    background-image: url(/assets/11990handwithfingerssplayed_111475.svg);
+  }
+  100% {
+    background-image: url(/assets/12020raisedfist_111487.svg);
+  }
+}
+
+@keyframes a {
+  0% {
+    background-image: url(/assets/11959victoryhand_111462.svg);
+  }
+  50% {
+    background-image: url(/assets/11990handwithfingerssplayed_111475.svg);
+  }
+  100% {
+    background-image: url(/assets/12020raisedfist_111487.svg);
+  }
+}
+
+@-webkit-keyframes b {
+  0% {
+    border: 3px solid red;
+  }
+  50% {
+    border: 3px solid #44ff00;
+  }
+  100% {
+    border: 3px solid red;
+  }
+}
+
+@keyframes b {
+  0% {
+    border: 3px solid red;
+  }
+  50% {
+    border: 3px solid #44ff00;
+  }
+  100% {
+    border: 3px solid red;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
